@@ -46,23 +46,23 @@ MonoBehaviour:
         Id:
           Value: 1090595483060781529
       ResourcePath: DB/Map1_mesh
-    - Path: Resources/DB/NestedAssetType|EntityPrototype
+    - Path: Resources/DB/Player/Player|EntityView
       AssetRef:
         Id:
-          Value: 1151761039050122536
-      ResourcePath: DB/NestedAssetType
+          Value: 1630203014578336129
+      ResourcePath: DB/Player/Player
     - Path: Resources/DB/Map1
       AssetRef:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
-    - Path: Resources/DB/PlayerCharacter|EntityPrototype
+    - Path: Resources/DB/Player/Player|EntityPrototype
       AssetRef:
         Id:
-          Value: 1950667654869920001
-      ResourcePath: DB/PlayerCharacter
-    - Path: Resources/DB/PlayerCharacter|EntityView
+          Value: 2524137963069019460
+      ResourcePath: DB/Player/Player
+    - Path: Resources/DB/NestedAssetType|EntityPrototype
       AssetRef:
         Id:
-          Value: 2816281063189117237
-      ResourcePath: DB/PlayerCharacter
+          Value: 4218921382831579660
+      ResourcePath: DB/NestedAssetType

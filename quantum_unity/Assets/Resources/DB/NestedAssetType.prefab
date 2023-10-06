@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8099011990972277526
+--- !u!1 &4989864782850886298
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3127637300260525333}
-  - component: {fileID: 7473561311175471897}
+  - component: {fileID: 1815683570494201579}
+  - component: {fileID: 6497487151019273254}
   m_Layer: 0
   m_Name: NestedAssetType
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3127637300260525333
+--- !u!4 &1815683570494201579
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099011990972277526}
+  m_GameObject: {fileID: 4989864782850886298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7473561311175471897
+--- !u!114 &6497487151019273254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099011990972277526}
+  m_GameObject: {fileID: 4989864782850886298}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 836dcb7e0f6259748b850a10912ce727, type: 3}
@@ -180,7 +180,7 @@ MonoBehaviour:
   View:
     Id:
       Value: 0
---- !u!114 &3848511395799254780
+--- !u!114 &-6693226052990356755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,5 +196,5 @@ MonoBehaviour:
     Identifier:
       Path: Resources/DB/NestedAssetType|EntityPrototype
       Guid:
-        Value: 1151761039050122536
-  Parent: {fileID: 7473561311175471897}
+        Value: 4218921382831579660
+  Parent: {fileID: 6497487151019273254}

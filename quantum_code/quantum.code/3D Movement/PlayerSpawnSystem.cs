@@ -14,7 +14,7 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         };
         f.Add(entity, playerLink);
 
-        if (f.Unsafe.TryGetPointer<Transform3D>(entity, out var transform3D))
-            transform3D->Position.X = 0 + player;
+        if (f.Unsafe.TryGetPointer<Transform2D>(entity, out var transform2D))
+            transform2D->Position.X = 0 + player;
     }
 }
