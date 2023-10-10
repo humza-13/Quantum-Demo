@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Quantum._3D_Movement;
+using Quantum.Bug_Crusher.Systems;
 
 namespace Quantum {
   public static class SystemSetup {
@@ -24,7 +24,8 @@ namespace Quantum {
 
         // user systems go here 
         new MovementSystem(),
-        new PlayerSpawnSystem()
+        new PlayerSpawnSystem(),
+        new GameMasterSystem()
       };
     }
   }

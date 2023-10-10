@@ -56,11 +56,21 @@ MonoBehaviour:
         Id:
           Value: 1710471675203725834
       ResourcePath: DB/Map1
+    - Path: Resources/DB/Player/Zeus|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 1902060918064426091
+      ResourcePath: DB/Player/Zeus
     - Path: Resources/DB/Player/Player|EntityPrototype
       AssetRef:
         Id:
           Value: 2524137963069019460
       ResourcePath: DB/Player/Player
+    - Path: Resources/DB/Player/Zeus|EntityView
+      AssetRef:
+        Id:
+          Value: 4087576978787299821
+      ResourcePath: DB/Player/Zeus
     - Path: Resources/DB/NestedAssetType|EntityPrototype
       AssetRef:
         Id:

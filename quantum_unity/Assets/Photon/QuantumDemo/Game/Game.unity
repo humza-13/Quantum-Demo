@@ -605,6 +605,9 @@ MonoBehaviour:
   - CharacterPrototype:
       Id:
         Value: 2524137963069019460
+    ZeusPrototype:
+      Id:
+        Value: 1902060918064426091
   PreloadAddressables: 0
   DynamicAssetDB:
     OnInitialDynamicAssetsRequested:

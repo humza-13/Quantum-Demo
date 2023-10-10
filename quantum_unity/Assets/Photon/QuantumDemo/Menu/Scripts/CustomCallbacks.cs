@@ -10,7 +10,6 @@ public class CustomCallbacks : QuantumCallbacks
     if (game.Session.IsPaused) return;
 
     foreach (var lp in game.GetLocalPlayers()) {
-      Debug.Log("CustomCallbacks - sending player: " + lp);
       game.SendPlayerData(lp, PlayerData);
     }
   }
