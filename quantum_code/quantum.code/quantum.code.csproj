@@ -92,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bug Crusher\QTN\Components\GameMaster.qtn" />
+    <Content Include="Bug Crusher\QTN\Components\MoveableWallComponent.qtn" />
+    <Content Include="Bug Crusher\QTN\Components\MovementConfig.qtn" />
     <Content Include="Bug Crusher\QTN\Components\PlayerLink.qtn" />
     <Content Include="Bug Crusher\QTN\Inputs\Input.qtn" />
   </ItemGroup>

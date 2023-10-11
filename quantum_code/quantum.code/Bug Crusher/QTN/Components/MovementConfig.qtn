@@ -1,0 +1,6 @@
+﻿component MovementConfig{
+    FP JumpHeight;
+    FP MoveSpeed;
+    bool IsGrounded;
+    FP GroundHeight;
+}

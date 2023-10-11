@@ -7,14 +7,9 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
 {
     public void OnPlayerDataSet(Frame f, PlayerRef player)
     {
-        EntityPrototype prototype = default;
         var data = f.GetPlayerData(player);
+        EntityPrototype prototype = f.FindAsset<EntityPrototype>(IsMasterClient(player) ? data.ZeusPrototype.Id : data.CharacterPrototype.Id);
 
-       if(IsMasterClient(player))
-            prototype = f.FindAsset<EntityPrototype>(data.ZeusPrototype.Id);
-        else
-            prototype = f.FindAsset<EntityPrototype>(data.CharacterPrototype.Id);
-        
         var entity = f.Create(prototype);
         var playerLink = new PlayerLink()
         {
@@ -24,26 +19,35 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         {
             IsZeus = IsMasterClient(player),
         };
-       
         f.Add(entity, playerLink);
         f.Add(entity, gameMaster);
 
+        if (!IsMasterClient(player))
+        {
+            var movementConfig = new MovementConfig()
+            {
+                JumpHeight = 3,
+                MoveSpeed = 10,
+                IsGrounded = true,
+                GroundHeight = FP._0_50
+            };
+            f.Add(entity, movementConfig);
+        }
+        
         if (f.Unsafe.TryGetPointer<Transform2D>(entity, out var transform2D))
         {
             if(IsMasterClient(player))
-                transform2D->Position = new FPVector2(3, 1);
+                transform2D->Position = new FPVector2(-3, FP.FromString("1.5"));
+
             else
-                transform2D->Position = new FPVector2(0, 0);
+                transform2D->Position = new FPVector2(1, 1);
 
         }
     }
 
     private bool IsMasterClient(PlayerRef player)
     {
-        if (player._index == 1) 
-            return true;
-        
+       // return player._index == 1;
         return false;
-        
     }
 }

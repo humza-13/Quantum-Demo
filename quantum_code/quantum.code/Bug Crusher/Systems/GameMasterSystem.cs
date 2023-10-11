@@ -20,9 +20,12 @@ public unsafe class GameMasterSystem :  SystemMainThreadFilter<GameMasterSystem.
         Input input = default;
         if (f.Unsafe.TryGetPointer(filter.Entity, out PlayerLink* playerLink))
             input = *f.GetPlayerInput(playerLink->Player);
-        
-        if(input.Jump.WasPressed)
-            Log.Debug("Adding Force...............");
-                       
+
+        if (input.Jump.WasPressed)
+            OpenWall(f, ref filter);
+    }
+
+    private void OpenWall(Frame f, ref ZeusFilter filter)
+    {
     }
 }
