@@ -72,8 +72,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bug Crusher\Systems\GameMasterSystem.cs" />
-    <Compile Include="Bug Crusher\Systems\MovementSystem.cs" />
+    <Compile Include="Bug Crusher\Systems\ForceCallBackSystem.cs" />
+    <Compile Include="Bug Crusher\Systems\ZeusControllerSystem.cs" />
+    <Compile Include="Bug Crusher\Systems\PlayerMovementSystem.cs" />
     <Compile Include="Bug Crusher\Systems\PlayerSpawnSystem.cs" />
     <Compile Include="CommandSetup.User.cs" />
     <Compile Include="Core\CodeGen.cs" />
@@ -92,9 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bug Crusher\QTN\Components\GameMaster.qtn" />
-    <Content Include="Bug Crusher\QTN\Components\MoveableWallComponent.qtn" />
     <Content Include="Bug Crusher\QTN\Components\MovementConfig.qtn" />
     <Content Include="Bug Crusher\QTN\Components\PlayerLink.qtn" />
+    <Content Include="Bug Crusher\QTN\Components\TestWall.qtn" />
     <Content Include="Bug Crusher\QTN\Inputs\Input.qtn" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

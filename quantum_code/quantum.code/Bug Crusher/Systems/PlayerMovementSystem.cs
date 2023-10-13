@@ -1,7 +1,7 @@
 ﻿using Photon.Deterministic;
 
 namespace Quantum.Bug_Crusher.Systems;
-public unsafe class MovementSystem : SystemMainThreadFilter<MovementSystem.PlayerFilter>
+public unsafe class PlayerMovementSystem : SystemMainThreadFilter<PlayerMovementSystem.PlayerFilter>
 {
     public struct PlayerFilter
     {

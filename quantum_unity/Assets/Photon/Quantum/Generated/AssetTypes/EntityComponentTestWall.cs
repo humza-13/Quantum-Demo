@@ -4,5 +4,5 @@
 // </auto-generated>
 
 [UnityEngine.DisallowMultipleComponent()]
-public partial class EntityComponentMoveableWall : EntityComponentBase<Quantum.Prototypes.MoveableWall_Prototype> {
+public partial class EntityComponentTestWall : EntityComponentBase<Quantum.Prototypes.TestWall_Prototype> {
 }

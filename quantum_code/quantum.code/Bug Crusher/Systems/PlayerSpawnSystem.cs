@@ -47,7 +47,7 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
 
     private bool IsMasterClient(PlayerRef player)
     {
-       // return player._index == 1;
-        return false;
+        return player._index == 1;
+       // return false;
     }
 }

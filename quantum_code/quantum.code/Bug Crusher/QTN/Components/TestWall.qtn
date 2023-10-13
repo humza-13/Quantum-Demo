@@ -1,0 +1,5 @@
+﻿signal OnForceAdded(entity_ref entity);
+
+component TestWall{
+    FP ForceAmount; 
+}
