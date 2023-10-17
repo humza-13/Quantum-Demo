@@ -26,7 +26,7 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
         {
             var movementConfig = new MovementConfig()
             {
-                JumpHeight = 3,
+                JumpHeight = 6,
                 MoveSpeed = 10,
                 IsGrounded = true,
                 GroundHeight = FP._0_50
@@ -47,7 +47,7 @@ public unsafe class PlayerSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSe
 
     private bool IsMasterClient(PlayerRef player)
     {
-        return player._index == 1;
-       // return false;
+       // return player._index == 1;
+        return false;
     }
 }

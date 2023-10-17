@@ -1,4 +1,6 @@
-﻿using Photon.Deterministic;
+﻿using System;
+using Photon.Deterministic;
+using Quantum.Physics2D;
 
 namespace Quantum.Bug_Crusher.Systems;
 public unsafe class PlayerMovementSystem : SystemMainThreadFilter<PlayerMovementSystem.PlayerFilter>
@@ -9,6 +11,7 @@ public unsafe class PlayerMovementSystem : SystemMainThreadFilter<PlayerMovement
         public GameMaster* GameMaster;
         public MovementConfig* MovementConfig;
         public PhysicsBody2D* PhysicsBody2D;
+        public Transform2D* Transform2D;
 
     }
  
@@ -37,12 +40,19 @@ public unsafe class PlayerMovementSystem : SystemMainThreadFilter<PlayerMovement
 
     private void HandleJump(Frame f, ref PlayerFilter filter, Input input)
     {
-        
+        if(input.Jump.WasPressed && filter.MovementConfig->IsGrounded)
+            filter.PhysicsBody2D->AddLinearImpulse(FPVector2.Up * filter.MovementConfig->JumpHeight);
     }
 
     private void GroundCheck(Frame f, ref PlayerFilter filter)
     {
-        
+        #region Debug
+        Draw.Line(filter.Transform2D->Position,
+            new FPVector2(filter.Transform2D->Position.X, filter.Transform2D->Position.Y - filter.MovementConfig->GroundHeight));
+        #endregion
+        var isGrounded = f.Physics2D.Linecast(filter.Transform2D->Position, 
+           new FPVector2(filter.Transform2D->Position.X , filter.Transform2D->Position.Y - filter.MovementConfig->GroundHeight)).HasValue;
+       filter.MovementConfig->IsGrounded = isGrounded;
     }
     
-}
+} 
